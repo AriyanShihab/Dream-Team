@@ -13,17 +13,27 @@ function getInputValueAsNumber(inputFeild) {
         return;
     }
     const valueInNumber = parseFloat(valueInString);
-    if (valueInNumber == NaN) {
-        alert("please enter a valid Number");
+
+    if (valueInNumber <= 0) {
+        alert("please Enter an number that greter than zero");
         return;
     }
+
     return valueInNumber;
 }
 // common function: 03;
 // set inner text of element
-function setInnerTexr(elementToSet, whatToSet) {
+function setInnerText(elementToSet, whatToSet) {
     getById(elementToSet).innerText = whatToSet;
 }
+
+// common function four: get inner text as number;
+function getInnerTextAsNumber(element) {
+    const sourse = getById(element);
+    const inNumber = parseFloat(sourse.innerText);
+    return inNumber;
+}
+
 // ====>>> task one: appending player name on selected player container
 // select button handeler
 const buttonParent = getById("buttonParent");
@@ -56,6 +66,28 @@ const playerCostCalculateButton = getById("playerCostCalculateButton");
 playerCostCalculateButton.addEventListener("click", function() {
     const eachPlayerCost = getInputValueAsNumber("costPerPlayer");
     const selectedPlayer = getById("selectedPlayerParent").children.length;
+    if (selectedPlayer < 1) {
+        alert("please select at least one player to calculate the cost of player");
+        return;
+    }
     const totalCostForPlayer = eachPlayerCost * selectedPlayer;
-    setInnerTexr("TotalCostForPlayer", totalCostForPlayer);
+    if (totalCostForPlayer == NaN) {
+        alert(
+            "please enter a number that is an possitive number, no string, no blank input"
+        );
+        return;
+    }
+    setInnerText("totalCostForPlayer", totalCostForPlayer);
+});
+
+// task three: calculate all the cost
+
+const totalCost = getById("totalCost");
+totalCost.addEventListener("click", function() {
+    const totalCostForPlayer = getInnerTextAsNumber("totalCostForPlayer");
+    const costForManager = getInputValueAsNumber("costForManager");
+    const costForCoach = getInputValueAsNumber("costForCoach");
+    const totalCost = totalCostForPlayer + costForCoach + costForCoach;
+    console.log(totalCost);
+    setInnerText("overAllCost", totalCost);
 });
