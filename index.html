@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -14,10 +19,230 @@
             },
         };
     </script>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-</body>
+    <!-- banner section start -->
+    <header class="relative md:p-10 p-1 bg-[url('./images/banner.jpg')] bg-no-repeat bg-cover bg-center min-h-screen z-20">
+        <div class="absolute h-full w-full inset-0 bg-gradient-to-r from-gray-700 to-gray-900 opacity-90 z-[-2]"></div>
+        <div class="conatiner lg:w-3/4 mx-auto p-5 flex items-center justify-center min-h-screen">
+            <div class="rounde py-20 px-4 bg-gradient-to-tr from-gray-700 to-gray-900 rounded md:p-20 text-center">
+                <span class="md:text-7xl text-5xl font-bold bg-gradient-to-tr from-purple-400 to-pink-500 text-transparent bg-clip-text">
+            Build Your Dream Team with US
+          </span>
+                <p class="my-4 mb-10 text-gray-50 font-semibold text-[20px] capitalize">
+                    let's create the world best team to win all the troffy
+                </p>
 
+                <a href="" class="px-4 py-2 rounded font-bold text-gray-800 text-[18px] bg-gradient-to-tr from-purple-400 to-pink-500">
+            Player List</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- banner section end -->
+
+    <!-- player-container start -->
+    <section class="bg-gray-900 p-2 md:p-10">
+      <div class="container lg:w-4/5 mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+          <!-- card holder -->
+          <div class="md:col-span-3 my-10 p-4">
+            <!--  bg-gray-900 p-4 rounded border border-gray-200 border-opacity-20 uporer line a add korte pari -->
+            <!-- player heading -->
+            <span
+              class="md:text-4xl text-2xl font-bold bg-gradient-to-tr from-purple-400 to-pink-500 text-transparent bg-clip-text"
+              >Select The Player you want in you team</span
+            >
+            <!-- player cards container -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5"
+            >
+              <!-- player card one -->
+              <div
+                class="playerCard bg-gray-700 rounded border border-gray-50 border-opacity-20"
+              >
+                <img
+                  src="./images/messi.jpg"
+                  alt=""
+                  class="player-image md:h-[190px] h-[220px] w-full object-cover"
+                />
+                <div class="p-2">
+                  <!-- player name -->
+                  <h1 class="text-2xl font-bold text-white my-3">
+                    Leionl Messi
+                  </h1>
+                  <!-- player stat  -->
+                  <div
+                    class="flex justify-between px-3 py-1 rounded bg-gray-800"
+                  >
+                    <p class="text-gray-100">Goal: 1022</p>
+                    <p class="text-gray-100">Assists: 779</p>
+                  </div>
+                  <button
+                    id=""
+                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <!-- player card two -->
+              <div
+                class="playerCard bg-gray-700 rounded border border-gray-50 border-opacity-20"
+              >
+                <img
+                  src="./images/neymar.jpg"
+                  alt=""
+                  class="player-image md:h-[190px] h-[220px] w-full object-cover"
+                />
+                <div class="p-2">
+                  <!-- player name -->
+                  <h1 class="text-2xl font-bold text-white my-3">Neymar JR</h1>
+                  <!-- player stat  -->
+                  <div
+                    class="flex justify-between px-3 py-1 rounded bg-gray-800"
+                  >
+                    <p class="text-gray-100">Goal: 472</p>
+                    <p class="text-gray-100">Assists: 139</p>
+                  </div>
+                  <button
+                    id=""
+                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <!-- player card three -->
+              <div
+                class="playerCard bg-gray-700 rounded border border-gray-50 border-opacity-20"
+              >
+                <img
+                  src="./images/mariya.jpg"
+                  alt=""
+                  class="player-image md:h-[190px] h-[220px] w-full object-cover"
+                />
+                <div class="p-2">
+                  <!-- player name -->
+                  <h1 class="text-2xl font-bold text-white my-3">A. D-Marea</h1>
+                  <!-- player stat  -->
+                  <div
+                    class="flex justify-between px-3 py-1 rounded bg-gray-800"
+                  >
+                    <p class="text-gray-100">Goal: 32</p>
+                    <p class="text-gray-100">Assists: 39</p>
+                  </div>
+                  <button
+                    id=""
+                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <!-- player card four -->
+              <div
+                class="playerCard bg-gray-700 rounded border border-gray-50 border-opacity-20"
+              >
+                <img
+                  src="./images/embappe.jpg"
+                  alt=""
+                  class="player-image md:h-[190px] h-[220px] w-full object-cover"
+                />
+                <div class="p-2">
+                  <!-- player name -->
+                  <h1 class="text-2xl font-bold text-white my-3">
+                    Kylian Mbappe
+                  </h1>
+                  <!-- player stat  -->
+                  <div
+                    class="flex justify-between px-3 py-1 rounded bg-gray-800"
+                  >
+                    <p class="text-gray-100">Goal: 36</p>
+                    <p class="text-gray-100">Assists: 23</p>
+                  </div>
+                  <button
+                    id=""
+                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <!-- player card five -->
+              <div
+                class="playerCard bg-gray-700 rounded border border-gray-50 border-opacity-20"
+              >
+                <img
+                  src="./images/icardi.jpg"
+                  alt=""
+                  class="player-image md:h-[190px] h-[220px] w-full object-cover"
+                />
+                <div class="p-2">
+                  <!-- player name -->
+                  <h1 class="text-2xl font-bold text-white my-3">
+                    Mauro Icardi
+                  </h1>
+                  <!-- player stat  -->
+                  <div
+                    class="flex justify-between px-3 py-1 rounded bg-gray-800"
+                  >
+                    <p class="text-gray-100">Goal: 23</p>
+                    <p class="text-gray-100">Assists: 52</p>
+                  </div>
+                  <button
+                    id=""
+                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+              <!-- player card 6 -->
+              <div
+                class="playerCard bg-gray-700 rounded border border-gray-50 border-opacity-20"
+              >
+                <img
+                  src="./images/ramos.jpg"
+                  alt=""
+                  class="player-image md:h-[190px] h-[220px] w-full object-cover"
+                />
+                <div class="p-2">
+                  <!-- player name -->
+                  <h1 class="text-2xl font-bold text-white my-3">
+                    Sergio Ramos
+                  </h1>
+                  <!-- player stat  -->
+                  <div
+                    class="flex justify-between px-3 py-1 rounded bg-gray-800"
+                  >
+                    <p class="text-gray-100">Goal: 06</p>
+                    <p class="text-gray-100">Assists: 17</p>
+                  </div>
+                  <button
+                    id=""
+                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                  >
+                    Select
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- player cards container -->
+          </div>
+          <!-- calculation aria -->
+          <div class="p-2 md:col-span-1">
+            <h1>Hello</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- player-container end -->
+  </body>
 </html>
