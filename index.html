@@ -50,17 +50,19 @@
     <!-- player-container start -->
     <section class="bg-gray-900 p-2 md:p-10">
       <div class="container lg:w-4/5 mx-auto">
+        <!-- player heading -->
+        <span
+          class="md:text-4xl text-2xl font-bold bg-gradient-to-tr from-purple-400 to-pink-500 text-transparent bg-clip-text my-10"
+          >Select The Player you want in you team</span
+        >
         <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
           <!-- card holder -->
           <div class="md:col-span-3 my-10 p-4">
             <!--  bg-gray-900 p-4 rounded border border-gray-200 border-opacity-20 uporer line a add korte pari -->
-            <!-- player heading -->
-            <span
-              class="md:text-4xl text-2xl font-bold bg-gradient-to-tr from-purple-400 to-pink-500 text-transparent bg-clip-text"
-              >Select The Player you want in you team</span
-            >
-            <!-- player cards container -->
+
+            <!-- player cards container start -->
             <div
+              id="buttonParent"
               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5"
             >
               <!-- player card one -->
@@ -86,7 +88,7 @@
                   </div>
                   <button
                     id=""
-                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                    class="bg-green-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
                   >
                     Select
                   </button>
@@ -113,7 +115,7 @@
                   </div>
                   <button
                     id=""
-                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                    class="bg-green-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
                   >
                     Select
                   </button>
@@ -140,7 +142,7 @@
                   </div>
                   <button
                     id=""
-                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                    class="bg-green-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
                   >
                     Select
                   </button>
@@ -169,7 +171,7 @@
                   </div>
                   <button
                     id=""
-                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                    class="bg-green-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
                   >
                     Select
                   </button>
@@ -198,7 +200,7 @@
                   </div>
                   <button
                     id=""
-                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                    class="bg-green-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
                   >
                     Select
                   </button>
@@ -227,22 +229,101 @@
                   </div>
                   <button
                     id=""
-                    class="bg-gradient-to-tr from-purple-400 to-pink-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
+                    class="bg-green-500 px-3 py-2 rounded font-bold text-black block my-4 w-full text-[18px]"
                   >
                     Select
                   </button>
                 </div>
               </div>
             </div>
-            <!-- player cards container -->
+            <!-- player cards container end -->
           </div>
           <!-- calculation aria -->
-          <div class="p-2 md:col-span-1">
-            <h1>Hello</h1>
+          <div class="p-4 my-10 md:col-span-1">
+            <div class="selectedPlayer">
+              <div
+                class="p-3 rounded bg-gray-800 border border-gray-50 border-opacity-20 my-5"
+              >
+                <h2 class="font-semibold text-white my-3 text-2xl capitalize">
+                  List of Yor selected PLayer
+                </h2>
+                <ol id="selectedPlayerParent" class="list-decimal"></ol>
+              </div>
+
+              <!-- actuall calulator start -->
+              <div
+                class="p-3 rounded bg-gray-800 border border-gray-50 border-opacity-20 my-5"
+              >
+                <span
+                  class="md:text-4xl text-2xl font-bold bg-gradient-to-tr from-purple-400 to-pink-500 text-transparent bg-clip-text my-10"
+                  >Budget</span
+                >
+                <p class="mt-10 mb-4 text-white">Per Player Cost</p>
+                <input
+                  type="number"
+                  name=""
+                  placeholder="Enter Per Player Cost"
+                  id="costPerPLayer"
+                  class="bg-gray-600 rounded p-2 text-gary-900"
+                />
+                <button
+                  class="w-1/2 block my-3 mx-auto py-2 font-bold rounded bg-green-500 text-gray-900"
+                  id="playerCostCalculatio"
+                >
+                  Calculate
+                </button>
+              </div>
+              <div
+                class="p-3 rounded bg-gray-800 border border-gray-50 border-opacity-20 my-5"
+              >
+                <h2 class="text-white">
+                  Total Cost for Player $
+                  <span id="TotalCostForPlayer">123</span>
+                </h2>
+                <p class="mt-10 mb-2 text-white">Cost For Manager</p>
+                <input
+                  type="number"
+                  name=""
+                  placeholder="Enter Manager Cost"
+                  id="costForManager"
+                  class="bg-gray-600 rounded p-2 text-gary-900"
+                />
+                <p class="my-2 text-white">Cost For Coach</p>
+                <input
+                  type="number"
+                  name=""
+                  placeholder="Enter Coach Cost"
+                  id="costForCoach"
+                  class="bg-gray-600 rounded p-2 text-gary-900"
+                />
+                <button
+                  class="w-1/2 block my-3 mx-auto py-2 font-bold rounded bg-green-500 text-gray-900"
+                  id="totalCost"
+                >
+                  Total Cost
+                </button>
+
+                <h2 class="text-white">
+                  Total Cost for Player $
+                  <span id="TotalCost">123</span>
+                </h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- player-container end -->
+    <!-- footer start -->
+    <footer
+      class="py-10 border-t border-gray-50 border-opacity-20 text-center bg-gray-900"
+    >
+      <h2 class="text-white font-bold">
+        All right Reserve by <span class="text-green-500">Ariyan Shihab</span>
+      </h2>
+    </footer>
+    <!-- footer end -->
+    <script src="./js/app.js"></script>
   </body>
 </html>
