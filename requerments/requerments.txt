@@ -1,0 +1,26 @@
+file name: requerments for assingment:5;
+Author: Ariyan Shihab;
+date: 21/08/2022;
+
+
+    1:must have a title on header section it has to be apper on browser title
+
+    2:make minimum 6 cards for player, sports type is not fixed, you can use any kind of sports
+    3: every card should contains player name and button, rest of infos are not compalsary
+
+    4: cards must be not reapitble; make diffarent card for each and every player 
+
+
+    ========= js part;
+     1:when user click a button click on playercard button, the name of the player will appen on selection player list (it's an order list)
+     2:make an input feild; take input as cost for per player, do calulate for selected player and show the result, when user click calculate button
+
+
+
+     =======for bonus:
+     when an player has been selected the button should be disabled
+     user can not select more than five player. if some one try to do that, theow an alert
+     minimum 6 github commit neeed
+     must use a common function 
+     should folow the nameing convensation;
+      do input validation 
