@@ -85,9 +85,17 @@ playerCostCalculateButton.addEventListener("click", function() {
 const totalCost = getById("totalCost");
 totalCost.addEventListener("click", function() {
     const totalCostForPlayer = getInnerTextAsNumber("totalCostForPlayer");
+    if (isNaN(totalCostForPlayer)) {
+        alert(
+            "please follow the normal prosess, first selet the player you want, then calculate there cost and then calculate the total"
+        );
+        return;
+    }
+    console.log(totalCostForPlayer);
+
     const costForManager = getInputValueAsNumber("costForManager");
     const costForCoach = getInputValueAsNumber("costForCoach");
     const totalCost = totalCostForPlayer + costForCoach + costForCoach;
-    console.log(totalCost);
+
     setInnerText("overAllCost", totalCost);
 });
