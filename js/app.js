@@ -101,7 +101,7 @@ totalCost.addEventListener("click", function() {
     const costForManager = getInputValueAsNumber("costForManager");
     const costForCoach = getInputValueAsNumber("costForCoach");
 
-    const totalCost = totalCostForPlayer + costForCoach + costForCoach;
+    const totalCost = totalCostForPlayer + costForCoach + costForManager;
 
     setInnerText("overAllCost", totalCost);
 });
