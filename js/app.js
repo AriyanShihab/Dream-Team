@@ -16,7 +16,7 @@ function getInputValueAsNumber(inputFeild) {
     const valueInNumber = parseFloat(valueInString);
 
     if (valueInNumber < 0) {
-        alert("please Enter an number that greter than zero");
+        alert("please Enter an number that greater than zero");
         element.classList.add("bg-red-500");
         return;
     }
@@ -40,7 +40,7 @@ function getInnerTextAsNumber(element) {
 // ====>>> task one: appending player name on selected player container
 // select button handeler
 const buttonParent = getById("buttonParent");
-console.log(buttonParent);
+
 // buttonParent.addEventListener("click", function(e) {});
 // for of loop to all the buttons
 const selectedPlayerParent = getById("selectedPlayerParent");
@@ -48,7 +48,6 @@ const allButtons = buttonParent.getElementsByTagName("button");
 let numberOfSelectedPLayer;
 for (const btn of allButtons) {
     btn.addEventListener("click", function() {
-        console.log(selectedPlayerParent);
         if (selectedPlayerParent.children.length == 5) {
             alert("only 5 player can be selected");
             return;
@@ -96,10 +95,15 @@ totalCost.addEventListener("click", function() {
         );
         return;
     }
-    console.log(totalCostForPlayer);
 
     const costForManager = getInputValueAsNumber("costForManager");
     const costForCoach = getInputValueAsNumber("costForCoach");
+    if (costForCoach === undefined || costForManager === undefined) {
+        alert(
+            "something went wrong, please follow the instruction given below of the page"
+        );
+        return;
+    }
 
     const totalCost = totalCostForPlayer + costForCoach + costForManager;
 
