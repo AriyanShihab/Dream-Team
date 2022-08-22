@@ -10,14 +10,17 @@ function getInputValueAsNumber(inputFeild) {
     const valueInString = element.value;
     if (valueInString == "") {
         alert("you can not enter an empty value");
+        element.classList.add("bg-red-500");
         return;
     }
     const valueInNumber = parseFloat(valueInString);
 
-    if (valueInNumber <= 0) {
+    if (valueInNumber < 0) {
         alert("please Enter an number that greter than zero");
+        element.classList.add("bg-red-500");
         return;
     }
+    element.classList.add("bg-green-400");
 
     return valueInNumber;
 }
@@ -37,13 +40,15 @@ function getInnerTextAsNumber(element) {
 // ====>>> task one: appending player name on selected player container
 // select button handeler
 const buttonParent = getById("buttonParent");
-buttonParent.addEventListener("click", function(e) {});
+console.log(buttonParent);
+// buttonParent.addEventListener("click", function(e) {});
 // for of loop to all the buttons
 const selectedPlayerParent = getById("selectedPlayerParent");
 const allButtons = buttonParent.getElementsByTagName("button");
 let numberOfSelectedPLayer;
 for (const btn of allButtons) {
     btn.addEventListener("click", function() {
+        console.log(selectedPlayerParent);
         if (selectedPlayerParent.children.length == 5) {
             alert("only 5 player can be selected");
             return;
@@ -71,7 +76,7 @@ playerCostCalculateButton.addEventListener("click", function() {
         return;
     }
     const totalCostForPlayer = eachPlayerCost * selectedPlayer;
-    if (totalCostForPlayer == NaN) {
+    if (Number.isNaN(totalCostForPlayer)) {
         alert(
             "please enter a number that is an possitive number, no string, no blank input"
         );
@@ -95,6 +100,7 @@ totalCost.addEventListener("click", function() {
 
     const costForManager = getInputValueAsNumber("costForManager");
     const costForCoach = getInputValueAsNumber("costForCoach");
+
     const totalCost = totalCostForPlayer + costForCoach + costForCoach;
 
     setInnerText("overAllCost", totalCost);
