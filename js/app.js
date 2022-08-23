@@ -45,6 +45,7 @@ const buttonParent = getById("buttonParent");
 // for of loop to all the buttons
 const selectedPlayerParent = getById("selectedPlayerParent");
 const allButtons = buttonParent.getElementsByTagName("button");
+let seatRemaing = getInnerTextAsNumber("seatRemaing") - 1;
 let numberOfSelectedPLayer;
 for (const btn of allButtons) {
     btn.addEventListener("click", function() {
@@ -60,6 +61,8 @@ for (const btn of allButtons) {
         selectedPlayerParent.appendChild(li);
         btn.setAttribute("disabled", true);
         btn.style.opacity = ".3";
+        let decrement = seatRemaing--;
+        getById("seatRemaing").innerText = "0" + decrement;
     });
     numberOfSelectedPLayer = selectedPlayerParent.children.length;
 }
@@ -109,3 +112,5 @@ totalCost.addEventListener("click", function() {
 
     setInnerText("overAllCost", totalCost);
 });
+
+// for seat remaing (extra work)

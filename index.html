@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth scroll-pt-7">
 
 <head>
     <meta charset="UTF-8" />
@@ -40,8 +40,14 @@
                     let's create the world best team to win all the troffy
                 </p>
 
-                <a href="" class="px-4 py-2 rounded font-bold md:text-3xl text-gray-800 text-[18px] bg-gradient-to-tr from-green-400 to-teal-600">
+                <a href="#playerList" class="px-4 py-2 rounded font-bold md:text-3xl text-gray-800 text-[18px] bg-gradient-to-tr from-green-400 to-teal-600">
             Player List</a
+          >
+          <a
+            href="#Instruction"
+            class="px-4 py-2 rounded font-bold md:text-3xl text-gray-800 text-[18px] bg-gradient-to-tr from-green-400 to-teal-600"
+          >
+            Instruction</a
           >
         </div>
       </div>
@@ -63,6 +69,7 @@
         </p>
 
         <div
+          id="playerList"
           class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-2 mx-auto"
         >
           <!-- card holder -->
@@ -86,7 +93,7 @@
                 <div class="p-2">
                   <!-- player name -->
                   <h1 class="text-2xl font-bold text-white my-3">
-                    Leionl Messi
+                    Lionel Messi
                   </h1>
                   <!-- player stat  -->
                   <div
@@ -242,7 +249,7 @@
             <!-- player cards container end -->
           </div>
           <!-- calculation aria -->
-          <div class="p-4 my-10 lg:col-span-1 col-span-full">
+          <div class="p-4 my-10 mt-3 lg:col-span-1 col-span-full">
             <div class="selectedPlayer">
               <div
                 class="p-3 rounded bg-gray-800 border border-gray-50 border-opacity-20 my-5"
@@ -250,7 +257,20 @@
                 <h2 class="font-semibold text-white my-3 text-2xl capitalize">
                   List of Your selected PLayer
                 </h2>
+
                 <ol id="selectedPlayerParent" class="list-decimal"></ol>
+
+                <div class="p-2 bg-gray-900 rounded my-3">
+                  <span class="text-white font-semibold"
+                    >Number Of Player you can Take</span
+                  >
+                  <h1
+                    class="text-green-500 font-black text-3xl"
+                    id="seatRemaing"
+                  >
+                    05
+                  </h1>
+                </div>
               </div>
 
               <!-- actuall calulator start -->
@@ -263,7 +283,7 @@
                 >
                 <p class="mt-10 mb-4 text-white">Per Player Cost</p>
                 <input
-                  type="number "
+                  type="number"
                   name=" "
                   placeholder="Enter Per Player Cost "
                   id="costPerPlayer"
@@ -285,7 +305,7 @@
                 </h2>
                 <p class="mt-10 mb-2 text-white">Cost For Manager</p>
                 <input
-                  type="number "
+                  type="number"
                   name=" "
                   placeholder="Enter Manager Cost "
                   id="costForManager"
@@ -293,7 +313,7 @@
                 />
                 <p class="my-2 text-white">Cost For Coach</p>
                 <input
-                  type="number "
+                  type="number"
                   name=" "
                   placeholder="Enter Coach Cost "
                   id="costForCoach"
@@ -319,7 +339,7 @@
 
     <!-- player-container end -->
     <!-- instruction -->
-    <section class="p-4">
+    <section class="p-4" id="Instruction">
       <div
         class="bg-red-200 rounded p-3 border border-gray-50 border-opacity-20 md:w-3/4 mx-auto m-4"
       >
